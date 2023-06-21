@@ -10,6 +10,8 @@ jobs:
     steps:
       - run: |
           echo "Foo" > foo.txt
+      - run: |
+          ls -al
     
   call:
     uses: shimat/reusable_workflow_sample/.github/workflows/reusable.yml@main
