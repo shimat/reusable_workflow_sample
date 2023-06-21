@@ -1,0 +1,18 @@
+name: CI
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Foo" > foo.txt
+    
+  call:
+    uses: shimat/reusable_workflow_sample/.github/workflows/reusable.yml@main
+    needs: [build]
+    with:
+      name: "Alice"
