@@ -13,6 +13,8 @@ jobs:
           echo "Foo" > foo.txt
       - run: |
           ls -al
+      - run: |
+          date
     
   call:
     uses: shimat/reusable_workflow_sample/.github/workflows/reusable.yml@main
